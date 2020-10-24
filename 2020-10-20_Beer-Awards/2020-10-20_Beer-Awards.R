@@ -65,7 +65,7 @@ medal_rank_colors <- c("Bronze" = "white",
 # create the map
 ggplot(us_map, aes(x, y, group = group)) +
     
-    theme_void() + 
+    theme_void(base_size = 16) + 
     theme(text = element_text(family = "serif",
                               color = "white"),
           
@@ -73,8 +73,8 @@ ggplot(us_map, aes(x, y, group = group)) +
           plot.margin = unit(rep(5, 4), "mm"),
           plot.title = element_text(hjust = 0.1,
                                     face = "bold",
-                                    size = 20),
-          plot.subtitle = element_text(hjust = 0.1)) +
+                                    size = 24),
+          plot.subtitle = element_text(hjust = 0.14)) +
     
     ggtitle(title, subtitle) +
     labs(caption = "@martinvanelp, Source: https://github.com/rfordatascience/tidytuesday") +
